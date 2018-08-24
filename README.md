@@ -1,2 +1,2 @@
 # ticket
-beacon check in system
+Make entry faster and sample when go to the concert through Beacon
