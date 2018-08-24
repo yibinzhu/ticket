@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="toolbar_padding_top">25dp</dimen>
+    <dimen name="toolbar_padding_bottom">15dp</dimen>
+    <dimen name="side_space">20dp</dimen>
+</resources>

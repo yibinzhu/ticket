@@ -1,0 +1,32 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/t1_gray</item>
+        <item name="colorPrimaryDark">@color/t1_blue_01</item>
+        <item name="colorAccent">@color/t1_blue_01</item>
+        <item name="colorControlNormal">@color/t1_gray</item>
+        <item name="colorControlActivated">@color/t1_dark_blue</item>
+        <item name="colorControlHighlight">@color/colorGrayLight</item>
+    </style>
+
+    <style name="MyTheme.BackButton" parent="android:style/Widget.Button">
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:layout_gravity">left|center</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:drawablePadding">0dp</item>
+        <item name="android:drawableLeft">@drawable/back6</item>
+    </style>
+
+    <style name="AppFullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AlertDialogCustom" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">#FFFFFF</item>
+    </style>
+</resources>

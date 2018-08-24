@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:padding="12dp"
+    android:gravity="center|center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/ic_gift"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:gravity="center|center"
+        android:src="@drawable/receive1" />
+
+    <TextView
+        android:id="@+id/ticket_playTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="left|center"
+        android:text="티켓명" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center|center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="장" />
+
+    </LinearLayout>
+
+</RelativeLayout>

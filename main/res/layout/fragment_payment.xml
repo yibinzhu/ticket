@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context="com.clipservice.eticket.ui.ticket.ticketPayment.TicketPaymentActivity">
+
+    <ScrollView
+        android:paddingBottom="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:paddingBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/t1_black_01"
+                    android:text="카드번호"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:hint="카드번호를 입력하세요"
+                    android:id="@+id/bank_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:maxLength="16"
+                    android:inputType="number" />
+            </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bank_date"
+                    android:orientation="vertical"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:textColor="@color/t1_black_01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="유효기간" />
+                    <TextView
+                        android:textSize="14dp"
+                        android:text="원  년"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="12dp"
+                        android:id="@+id/bank_date_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:background="@drawable/border_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp" />
+                </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+                <TextView
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/colorGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="결제금액" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/price_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="36sp"
+                        android:textColor="@color/t1_blue_01"
+                        android:text="00000" />
+
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/colorGray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="원" />
+                </LinearLayout>
+
+        </LinearLayout>
+        <!--결제내역-->
+        <LinearLayout
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:background="@drawable/border"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="16sp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/t1_black_01"
+                android:text="공연제목"
+                android:id="@+id/ticket_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="2dp" />
+            <LinearLayout
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/t1_gray_01"
+                        android:text="관람일시"
+                        android:layout_marginRight="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textColor="@color/t1_black_01"
+                        android:id="@+id/play_time"
+                        android:text="관람일시"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <!--division line-->
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/border_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/t1_gray_01"
+                        android:text="공연장소"
+                        android:layout_marginRight="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textColor="@color/t1_black_01"
+                        android:id="@+id/play_address"
+                        android:text="관람자소"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/border_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp" />
+                <LinearLayout
+                    android:id="@+id/booinginfo_section"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/btn_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/t1_green_01"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:text="결제요청" />
+
+    <!--<com.clipservice.eticket.widget.Keyboard-->
+    <!--android:id="@+id/keyboard"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_alignParentBottom="true"/>-->
+</RelativeLayout>

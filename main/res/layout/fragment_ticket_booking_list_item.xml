@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="9dp" >
+
+        <ImageView
+            android:id="@+id/ticket_postImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:background="#66000000" >
+
+            <TextView
+                android:id="@+id/ticket_playTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/ticket_genres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="9dp"
+                android:textColor="#ffffff" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:baselineAligned="false"-->
+            <!--android:layout_margin="3dp"-->
+            <!--android:padding="3dp"-->
+            <!--android:orientation="horizontal" >-->
+
+            <!--<FrameLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1" >-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:textSize="16sp"-->
+                    <!--android:textColor="@color/colorBlack"-->
+                    <!--android:text="위치보기" />-->
+
+            <!--</FrameLayout>-->
+
+            <!--<View-->
+                <!--android:layout_width="1dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_gravity="end"-->
+                <!--android:background="@color/colorLine" />-->
+
+            <!--<FrameLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1" >-->
+
+                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_gravity="left"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:src="@drawable/ic_maps" />&ndash;&gt;-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:textSize="16sp"-->
+                    <!--android:textColor="@color/colorBlack"-->
+                    <!--android:text="관람정보" />-->
+
+            <!--</FrameLayout>-->
+
+        <!--</LinearLayout>-->
+
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="6dp"-->
+            <!--android:background="@color/colorLine" />-->
+
+    <!--</LinearLayout>-->
+
+</LinearLayout>

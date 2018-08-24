@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.clipservice.eticket.ui.welcomeGuide.WelcomeGuide">
+
+    <android.support.v4.view.ViewPager
+        android:scaleType="centerCrop"
+        android:id="@+id/welcome_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <Button
+        android:visibility="gone"
+        android:text="시작하기"
+        android:background="@color/t1_green_02"
+        android:textColor="@color/colorWhite"
+        android:id="@+id/welcome_guide_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

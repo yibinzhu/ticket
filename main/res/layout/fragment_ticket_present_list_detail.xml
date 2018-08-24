@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="휴대폰번호"
+            android:textColor="@color/t1_black_01" />
+
+        <com.clipservice.eticket.widget.CustomEditText
+            android:id="@+id/custom_editor"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="5dp"
+            android:inputType="number"
+            android:drawableRight="@drawable/ic_user_t_1"
+            android:hint="반으실분 휴대폰번호를 입력하세요"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/t1_gray_01"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/t1_gray_01"
+                android:text="매수선택"
+                android:textColor="@color/t1_black_01" />
+        </LinearLayout>
+        <!--티켓 권종 상세 정보-->
+        <LinearLayout
+            android:id="@+id/seat_container"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.clipservice.eticket.ui.ticket.ticketPresentListDetail.SeatTypeInfo
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:text="test"
+        android:id="@+id/btn_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/t1_green_01"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:text="선물 보내기" />
+
+</RelativeLayout>

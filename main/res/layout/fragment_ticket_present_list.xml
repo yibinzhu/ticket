@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/no_ticket_notice"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <TextView
+            android:layout_gravity="center"
+            android:text="티켓 업으시면 밑에 버튼 크릭하고 바로 예매 하십시오!"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_booking"
+            android:textColor="@color/colorWhite"
+            android:background="@color/t1_green"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="예매하기"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/ticket_present_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>

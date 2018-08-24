@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".ui.login.LoginFragment">
+<LinearLayout
+    android:background="@color/colorWhite"
+    android:paddingTop="10dp"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textColor="@color/t1_black_01"
+        android:text="아이디"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="아이디를 입력 하세요"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textColor="@color/t1_black_01"
+        android:text="비밀번호"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="비밀번호를 입력 하세요"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textColor="@color/t1_black_01"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="SNS 계정을 연동 하시면  기기변동 또는 번호변경 시에도 보유 티켓을 다시 받을 수 있습니다"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_login"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            <FrameLayout
+                android:id="@+id/framelayout_kakao"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:padding="20dp"
+                android:background="@drawable/img_kk"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+            <RadioButton
+                android:id="@+id/radio_kaotalk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/framelayout_naver"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:padding="20dp"
+                android:background="@drawable/img_nav"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <RadioButton
+                    android:id="@+id/radio_naver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/framelayout_facebook"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:padding="20dp"
+                android:background="@drawable/img_fb"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <RadioButton
+                    android:id="@+id/radio_facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+        </RadioGroup>
+
+</LinearLayout>
+
+    <Button
+        android:textColor="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        android:text="LOGIN"
+        android:id="@+id/btn_login"
+        android:background="@color/t1_green_01"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+</RelativeLayout>

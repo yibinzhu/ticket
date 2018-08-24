@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".ui.ticket.ticketBookingDetail.BookingdetailFragment">
+
+    <ScrollView
+        android:paddingBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/ticket_postImg"
+                    android:layout_width="70dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/ic_image_background" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="@dimen/side_space"
+                    android:paddingRight="@dimen/side_space">
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:textColor="#2B2B2B"
+                        android:id="@+id/ticket_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="공연제목"
+                        android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/ticket_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="공연주소"
+                            android:textSize="14sp" />
+                    <TextView
+                        android:layout_gravity="bottom"
+                        android:textSize="14sp"
+                        android:textColor="#029CDA"
+                        android:id="@+id/play_time"
+                        android:text="0000-0000-0000"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--concert infomation section-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+                <!--section header-->
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:background="@color/t1_gray"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:textColor="@color/t1_black"
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="상세정보" />
+                    </LinearLayout>
+                <!--section body-->
+                    <TextView
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:id="@+id/text_about"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="공연정보"
+                        android:textSize="13dp" />
+            </LinearLayout>
+
+            <!--ticket price infomation section-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+                <!--section header-->
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:background="@color/t1_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:textColor="@color/t1_black"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="할인정보" />
+                </LinearLayout>
+                <!--section body-->
+                    <LinearLayout
+                    android:id="@+id/counter_section"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+                    </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/btn_booking"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/t1_green"
+        android:text="예매하기"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+</RelativeLayout>

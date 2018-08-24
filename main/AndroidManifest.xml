@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.clipservice.eticket">
+
+    <uses-permission android:name="com.clipservice.eticket.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.SEND" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- read user phone number from contact -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name=".common.GlobalValues"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service android:name="com.perples.recosdk.RECOBeaconService" />
+        <service android:name=".common.fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".common.fcm.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".ui.ticket.ticketBookingDetail.BookingdetailActivity" />
+        <activity android:name=".common.WelcomeGuideAct" />
+        <activity android:name=".common.WelcomeStart" />
+        <!-- 알림메시지를 크릭한후 가는 페이지 -->
+        <activity android:name=".common.RouterActivity">
+            <intent-filter>
+                <data
+                    android:host="localtunnel"
+                    android:path="/router"
+                    android:scheme="cloudticket" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.ticket.ticketPayment.TicketPaymentActivity" />
+        <activity android:name=".ui.ticket.ticketPublishList.TicketPublishListActivity" />
+        <activity android:name=".ui.ticket.requestTiceketing.RequestTicketingActivity" />
+        <activity android:name=".ui.main.MainActivity">
+            <intent-filter>
+                <data
+                    android:host="localtunnel"
+                    android:path="/main"
+                    android:scheme="cloudticket" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:theme="@style/Theme.Design.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.welcomeGuide.WelcomeGuide"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity android:name=".ui.notifications.Notification" />
+        <activity android:name=".ui.ticket.ticketPresentList.TicketPresentListActivity" />
+        <activity android:name=".ui.ticket.sendTicket.SendTicket" />
+        <activity android:name=".ui.ticket.myTicketDetail.TicketDetailActivitys" />
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.adDetail.AdDetailActivity" />
+
+        //카톡 위해 Activity
+        <activity android:name=".ui.login.kakao.SampleLoginActivity" />
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+
+        <activity
+            android:name="com.kakao.auth.authorization.authcode.KakaoWebViewActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ticket.ticketPresentListDetail.PresentDetailActivity"
+            android:theme="@style/AppFullScreenTheme"/>
+    </application>
+</manifest>

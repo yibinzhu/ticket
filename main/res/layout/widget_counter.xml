@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="5dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical">
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:textSize="14sp"
+                android:id="@+id/seatType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="seatType" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="120dp"
+            android:layout_alignParentRight="true"
+            android:textAlignment="center"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp">
+            <TextView
+                android:textColor="@color/t1_black_01"
+                android:textSize="16sp"
+                android:id="@+id/ticket_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가격" />
+            <TextView
+                android:text="원"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_marginLeft="120dp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal">-->
+            <!--<TextView-->
+                <!--android:id="@+id/price_total"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="0"-->
+                <!--android:textColor="@color/colorAccent1"-->
+                <!--android:textSize="20sp" />-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingTop="10dp"-->
+                <!--android:paddingBottom="10dp"-->
+                <!--android:text="원" />-->
+        <!--</LinearLayout>-->
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_minus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/t1_gray"
+                android:padding="6dp"
+                android:text="-"
+                android:textAlignment="center"
+                android:textColor="@color/t1_black"
+                android:textSize="12sp" />
+            <TextView
+                android:textColor="@color/t1_black_01"
+                android:id="@+id/num_counter"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+            <Button
+                android:id="@+id/btn_plus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/t1_gray"
+                android:padding="6dp"
+                android:text="+"
+                android:textColor="@color/t1_black"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
